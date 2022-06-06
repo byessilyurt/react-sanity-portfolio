@@ -3,17 +3,17 @@ export default {
   //Change The Website Template
 
   //   Header Details ---------------------
-  name: "chetan",
+  name: "Yusuf",
   headerTaglineOne: "Hello 👋",
   headerTaglineTwo:
-    "I'm Chetan Verma - curious designer and devloper based in New Delhi, India. ",
+    "I'm Yusuf Yesilyurt - who loves exploring new technologies and designs. 📍 Dublin, Ireland 🇮🇪",
 
   socials: [
-    { title: "Github", link: "https://github.com/chetanverma16" },
-    { title: "LinkedIn", link: "https://www.linkedin.com/in/chetanverma7/" },
-    { title: "Twitter", link: "https://twitter.com/realchetanverma" },
-    { title: "Blog", link: "https://blog.chetanverma.com/" },
-    { title: "Email", link: "mailto:hello@chetanverma.com" },
+    { title: "Github", link: "https://github.com/byessilyurt" },
+    { title: "LinkedIn", link: "https://www.linkedin.com/in/yessilyurt/" },
+    { title: "Twitter", link: "https://twitter.com/byessilyurt" },
+    { title: "Blog", link: "#" },
+    { title: "Email", link: "mailto:y.yesilyurt14@gmail.com" },
   ],
 
   // End Header Details -----------------------
