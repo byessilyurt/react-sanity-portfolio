@@ -44,7 +44,7 @@ export default function Home({ headline, project }) {
         </h1>
         <Socials className="mt-5 mob:mt-2 laptop:mt-5" />
       </div>
-      <div classname="text-xl text-red-300"> TEST </div>
+      <div className="text-xl text-red-300"> TEST </div>
       <div
         className="mt-40 mob:mt-10 laptop:mt-40 mob:p-2 laptop:p-0"
         ref={workRef}
