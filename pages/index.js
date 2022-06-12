@@ -8,7 +8,7 @@ import client from "../client";
 // Local Data
 import data from "../yourData";
 
-export default function Home({ headline }) {
+export default function Home({ headline, project }) {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -38,25 +38,26 @@ export default function Home({ headline }) {
       />
       <div className="laptop:mt-20 mob:mt-10">
         <h1 className="mt-5 text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
-          {headline?.name} <br />
           {headline?.headerTaglineOne} <br />
+          {headline?.name} <br />
           {headline?.headerTaglineTwo}
         </h1>
         <Socials className="mt-5 mob:mt-2 laptop:mt-5" />
       </div>
+      <div classname="text-xl text-red-300"> TEST </div>
       <div
         className="mt-40 mob:mt-10 laptop:mt-40 mob:p-2 laptop:p-0"
         ref={workRef}
       >
         <h1 className="text-2xl text-bold">Work.</h1>
         <div className="mt-10 mob:mt-5 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-4">
-          {data.projects.map((project, index) => (
+          {project.map((pjt, index) => (
             <WorkCard
               key={index}
-              img={project.imageSrc}
-              name={project.title}
-              description={project.description}
-              onClick={() => window.open(project.url)}
+              name={pjt.name}
+              img={pjt.imageSrc}
+              description={pjt.description}
+              onClick={() => window.open(pjt.url)}
             />
           ))}
         </div>
@@ -105,10 +106,17 @@ export async function getStaticProps(context) {
     *[_type == "headline"][0]
   `
   );
+  const project = await client.fetch(
+    `
+    *[_type == "project"]
+  `
+  );
   console.log(headline);
+  console.log(project);
   return {
     props: {
       headline,
+      project,
     },
   };
 }
