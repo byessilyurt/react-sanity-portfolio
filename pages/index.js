@@ -31,7 +31,7 @@ export default function Home({ headline, project }) {
   };
 
   return (
-    <div className="container mx-auto mb-10">
+    <div className="container mx-20 mb-10">
       <Header
         handleWorkScroll={handleWorkScroll}
         handleAboutScroll={handleAboutScroll}
