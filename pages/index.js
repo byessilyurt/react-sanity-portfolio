@@ -44,7 +44,6 @@ export default function Home({ headline, project }) {
         </h1>
         <Socials className="mt-5 mob:mt-2 laptop:mt-5" />
       </div>
-      <div className="text-xl text-red-300"> TEST </div>
       <div
         className="mt-40 mob:mt-10 laptop:mt-40 mob:p-2 laptop:p-0"
         ref={workRef}
@@ -55,7 +54,7 @@ export default function Home({ headline, project }) {
             <WorkCard
               key={index}
               name={pjt.name}
-              img={pjt.imageSrc}
+              img={pjt.imageURL}
               description={pjt.description}
               onClick={() => window.open(pjt.url)}
             />
@@ -111,8 +110,7 @@ export async function getStaticProps(context) {
     *[_type == "project"]
   `
   );
-  console.log(headline);
-  console.log(project);
+
   return {
     props: {
       headline,
