@@ -8,7 +8,15 @@ import client from "../client";
 // Local Data
 import data from "../yourData";
 
-export default function Home({ headline, project }) {
+// TODO: Add a loading screen
+// TODO: Add a 404 page
+// todo: Add a footer
+// todo: Add a ABOUT paragraph
+// todo: redesign header section
+// todo: redesign whole page
+// todo: add other projects
+
+export default function Home({ headline, projects, services }) {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -50,13 +58,13 @@ export default function Home({ headline, project }) {
       >
         <h1 className="text-2xl text-bold">Work.</h1>
         <div className="mt-10 mob:mt-5 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-4">
-          {project.map((pjt, index) => (
+          {projects?.map((project, index) => (
             <WorkCard
               key={index}
-              name={pjt.name}
-              img={pjt.imageURL}
-              description={pjt.description}
-              onClick={() => window.open(pjt.url)}
+              name={project?.name}
+              img={project?.imageURL}
+              description={project?.description}
+              onClick={() => window.open(project?.url)}
             />
           ))}
         </div>
@@ -64,11 +72,11 @@ export default function Home({ headline, project }) {
       <div className="mt-40 mob:mt-2 laptop:mt-40 mob:p-2 laptop:p-0">
         <h1 className="text-2xl text-bold">Services.</h1>
         <div className="mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-6">
-          {data.services.map((service, index) => (
+          {services?.map((service, index) => (
             <ServiceCard
               key={index}
-              name={service.title}
-              description={service.description}
+              name={service?.title}
+              description={service?.description}
             />
           ))}
         </div>
@@ -89,32 +97,34 @@ export default function Home({ headline, project }) {
         </div>
       </div>
       <h1 className="text-sm text-bold mt-10 mob:mt-2 laptop:mt-10 mob:p-2 laptop:p-0">
-        Made With ❤ by{" "}
-        <Link href="http://www.chetanverma.com">
-          <a className="underline underline-offset-1">Chetan Verma</a>
-        </Link>
+        June 2022
       </h1>
     </div>
   );
 }
 
 export async function getStaticProps(context) {
-  // It's important to default the slug so that it doesn't return "undefined"
   const headline = await client.fetch(
     `
     *[_type == "headline"][0]
   `
   );
-  const project = await client.fetch(
+  const projects = await client.fetch(
     `
     *[_type == "project"]
   `
   );
 
+  const services = await client.fetch(
+    `
+    *[_type == "service"]
+  `
+  );
   return {
     props: {
       headline,
-      project,
+      projects,
+      services,
     },
   };
 }
