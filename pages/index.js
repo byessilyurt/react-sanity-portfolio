@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
@@ -16,10 +16,12 @@ import data from "../yourData";
 // todo: redesign whole page
 // todo: add other projects
 
-export default function Home({ headline, projects, services }) {
+export default function Home({ headline, projects, services, about }) {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
+  const aboutText = about.body[0].children[0].text;
+  const aboutTitle = about.title;
 
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -38,8 +40,12 @@ export default function Home({ headline, projects, services }) {
     });
   };
 
+  useEffect(() => {
+    console.log(projects);
+  }, [projects]);
+
   return (
-    <div className="container mx-20 mb-10">
+    <div className="container mx-auto mb-10">
       <Header
         handleWorkScroll={handleWorkScroll}
         handleAboutScroll={handleAboutScroll}
@@ -56,7 +62,7 @@ export default function Home({ headline, projects, services }) {
         className="mt-40 mob:mt-10 laptop:mt-40 mob:p-2 laptop:p-0"
         ref={workRef}
       >
-        <h1 className="text-2xl text-bold">Work.</h1>
+        <h1 className="text-2xl text-bold">Work</h1>
         <div className="mt-10 mob:mt-5 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-4">
           {projects?.map((project, index) => (
             <WorkCard
@@ -64,13 +70,14 @@ export default function Home({ headline, projects, services }) {
               name={project?.name}
               img={project?.imageURL}
               description={project?.description}
-              onClick={() => window.open(project?.url)}
+              onClick={() => window.open(project?.githubURL)}
+              tags={project?.tags}
             />
           ))}
         </div>
       </div>
       <div className="mt-40 mob:mt-2 laptop:mt-40 mob:p-2 laptop:p-0">
-        <h1 className="text-2xl text-bold">Services.</h1>
+        <h1 className="text-2xl text-bold">Services</h1>
         <div className="mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-6">
           {services?.map((service, index) => (
             <ServiceCard
@@ -85,13 +92,17 @@ export default function Home({ headline, projects, services }) {
         className="mt-40 mob:mt-2 laptop:mt-40 mob:p-2 laptop:p-0"
         ref={aboutRef}
       >
-        <h1 className="text-2xl text-bold">About.</h1>
-        <p className="m-5 mob:m-0 laptop:m-5 mob:mt-2 laptop:ml-0 ml-0 text-3xl mob:text-xl laptop:text-3xl w-3/5 mob:w-full laptop:w-3/5">
-          {data.aboutpara}
-        </p>
+        {about && (
+          <>
+            <h1 className="text-2xl text-bold">{aboutTitle}</h1>
+            <p className="m-5 mob:m-0 laptop:m-5 mob:mt-2 laptop:ml-0 ml-0 text-3xl mob:text-xl laptop:text-3xl w-3/5 mob:w-full laptop:w-3/5">
+              {aboutText}
+            </p>
+          </>
+        )}
       </div>
       <div className="mt-40 mob:mt-5 laptop:mt-40 mob:p-2 laptop:p-0">
-        <h1 className="text-2xl text-bold">Contact.</h1>
+        <h1 className="text-2xl text-bold">Contact</h1>
         <div className="mt-5">
           <Socials />
         </div>
@@ -120,11 +131,17 @@ export async function getStaticProps(context) {
     *[_type == "service"]
   `
   );
+  const about = await client.fetch(
+    `
+    *[_type == "about"][0]
+  `
+  );
   return {
     props: {
       headline,
       projects,
       services,
+      about,
     },
   };
 }

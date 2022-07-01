@@ -10,6 +10,9 @@ module.exports = {
       laptopl: "1440px",
       desktop: "1280px",
     },
+    fontFamily: {
+      logo: ["Rubik Moonrocks", "cursive"],
+    },
     extend: {},
   },
   plugins: [],

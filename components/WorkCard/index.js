@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const WorkCard = ({ img, name, description, onClick }) => {
+const WorkCard = ({ img, name, description, onClick, tags }) => {
+  useEffect(() => {
+    console.log(tags);
+  }, []);
+
   return (
     <div
       className="overflow-hidden cursor-pointer rounded-lg p-4 mob:p-2 laptop:p-4 first:ml-0"
@@ -14,13 +18,19 @@ const WorkCard = ({ img, name, description, onClick }) => {
       </div>
       <div className="mt-5 mb-3 flex justify-between items-center">
         <h1 className="text-3xl font-medium">{name ? name : "Project Name"}</h1>
-        <h2 className="text-sm text-grey-300 opacity-40 widest text-md">
-          Project Tags, React, Django
-        </h2>
       </div>
       <h3 className="text-xl opacity-50">
         {description ? description : "Description"}
       </h3>
+      <div className="mt-2 flex justify-start items-center">
+        {tags
+          ? tags.map((tag) => (
+              <h2 className="text-sm text-grey-300 mr-1 opacity-40 widest text-md">
+                {tag}
+              </h2>
+            ))
+          : null}
+      </div>
     </div>
   );
 };

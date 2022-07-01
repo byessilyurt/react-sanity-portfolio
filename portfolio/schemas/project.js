@@ -9,8 +9,8 @@ export default {
       type: "string",
     },
     {
-      name: "tag",
-      title: "tag",
+      name: "tags",
+      title: "Tags",
       type: "array",
       of: [
         {
