@@ -24,8 +24,11 @@ const WorkCard = ({ img, name, description, onClick, tags }) => {
       </h3>
       <div className="mt-2 flex justify-start items-center">
         {tags
-          ? tags.map((tag) => (
-              <h2 className="text-sm text-grey-300 mr-1 opacity-40 widest text-md">
+          ? tags.map((tag, index) => (
+              <h2
+                className="text-sm text-grey-300 mr-1  opacity-40 widest text-md"
+                key={index}
+              >
                 {tag}
               </h2>
             ))
