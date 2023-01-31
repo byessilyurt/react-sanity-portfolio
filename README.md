@@ -8,9 +8,9 @@ The website is live on this domain: [https://yusufyesilyurt.com](https://yusufye
 
 ## Features
 
--   About Me: A section where you can introduce yourself and your background.
--   Works: A section to showcase your projects and portfolio pieces.
--   Contact: A form where visitors can contact you.
+-   About Me: A section where you can introduce myself and my background.
+-   Works: A section to showcase my projects and portfolio pieces.
+-   Contact: A form where visitors can contact me.
 -   User-friendly design with modern and clean look.
 -   Built with Next.js, a popular React-based framework for building scalable and fast websites.
 -   Implemented with Sanity.io for managing and retrieving data for portfolio items.
