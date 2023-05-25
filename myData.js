@@ -1,9 +1,9 @@
 export default {
   //   Header Details ---------------------
-  name: "Yusuf",
-  headerTaglineOne: "Hello 👋",
+  name: "I'm Yusuf,",
+  headerTaglineOne: "Hi",
   headerTaglineTwo:
-    "I'm a Software Engineer specializing in front-end technologies and project management, currently based in Wroclaw, Poland 🇵🇱",
+    "a Software Engineer specializing in front-end technologies and project management, currently based in Wroclaw, Poland 🇵🇱",
 
   socials: [
     { title: "Github", link: "https://github.com/byessilyurt" },
