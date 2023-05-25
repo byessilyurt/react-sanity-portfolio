@@ -3,14 +3,15 @@ export default {
   name: "Yusuf",
   headerTaglineOne: "Hello 👋",
   headerTaglineTwo:
-    "I'm Yusuf Yesilyurt - who loves exploring new technologies and designs. 📍 Dublin, Ireland 🇮🇪",
+    "I'm a Software Engineer specializing in front-end technologies and project management, currently based in Wroclaw, Poland 🇵🇱",
 
   socials: [
     { title: "Github", link: "https://github.com/byessilyurt" },
     { title: "LinkedIn", link: "https://www.linkedin.com/in/yessilyurt/" },
     { title: "Twitter", link: "https://twitter.com/byessilyurt" },
-    { title: "Blog", link: "#" },
+    { title: "Blog", link: "https://yesilyurt.medium.com/" },
     { title: "Email", link: "mailto:y.yesilyurt14@gmail.com" },
+    { title: "Resume", link: "files/cv.pdf" },
   ],
 
   // End Header Details -----------------------
@@ -18,92 +19,71 @@ export default {
   // Work Section ------------------------
   projects: [
     {
-      title: "Project One", //Project Title - Add Your Project Title Here
-      description: "Web Design",
-      //Project Image - Add Your Project Image Here
+      title: "StudyBuddy",
+      description: "A platform connecting students for collaborative study.",
       imageSrc:
-        "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://images.pexels.com/photos/6177607/pexels-photo-6177607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      url: "https://studybuddy-7fd62.web.app/",
     },
     {
-      title: "Project Two", //Project Title - Add Your Project Title Here
-      description: "Web Development",
-      //Project Image - Add Your Project Image Here
+      title: "Lost & Found",
+      description: "A web app to post and find lost items in Wroclaw.",
       imageSrc:
-        "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://images.pexels.com/photos/66100/pexels-photo-66100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      url: "https://lostandfound-a6141.web.app/",
     },
     {
-      title: "Project Three", //Project Title - Add Your Project Title Here
-      description: "Design",
-      //Project Image - Add Your Project Image Here
+      title: "Secim Tahminim (My Election Prediction) Web App",
+      description:
+        "Share your predictions for the upcoming elections in Turkey.",
       imageSrc:
-        "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      url: "https://secim-tahminim.firebaseapp.com/",
     },
     {
-      title: "Project Four", //Project Title - Add Your Project Title Here
-      description: "Marketing",
-      //Project Image - Add Your Project Image Here
+      title: "Rent A Car (Freelancing Project)",
+      description:
+        "A web app for renting cars with functionalities to display available cars, filter by date and location.",
       imageSrc:
-        "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
-    },
-    {
-      title: "Project Five", //Project Title - Add Your Project Title Here
-      description: "Development",
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
-    },
-    {
-      title: "Project Six", //Project Title - Add Your Project Title Here
-      description: "Design & Development",
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        "https://images.pexels.com/photos/1252500/pexels-photo-1252500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      url: "http://yigitotokiralama.com",
     },
   ],
 
   // End Work Section -----------------------
 
-  // Services Section ---------------
-
-  services: [
+  // About Me Section ----------------
+  aboutme: [
     {
-      title: "Art Direction",
+      title: "Skills",
       description:
-        "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance.",
+        "I'm proficient in HTML, CSS, JavaScript, React, and Node.js. My other strengths include SEO, Redux, GitHub, GraphQL, and WordPress.",
     },
     {
-      title: "Branding",
+      title: "Education",
       description:
-        "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors.",
+        "My academic background in law and technology has equipped me with unique interdisciplinary skills that enhance my coding abilities.",
     },
     {
-      title: "Web Design",
+      title: "Continuous Learner",
       description:
-        "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel.",
+        "One thing I love about the tech industry is its ever-evolving nature. This fuels my desire to stay updated and continuously learn new technologies. I particularly enjoy attending tech meetups, webinars, and workshops to improve my skills and connect with like-minded individuals.",
     },
     {
-      title: "3D Design",
+      title: "Future Goals",
       description:
-        "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life.",
+        "As for my aspirations, I see myself in a role that allows me to solve complex problems and make a significant impact through my work. I aim to take on more leadership roles in tech, where I can leverage my skills to guide projects from conceptualization to deployment. I'm also interested in exploring areas like machine learning and artificial intelligence, which I believe are the future of the tech industry.",
+    },
+    {
+      title: "Personal Interests",
+      description:
+        "Outside of tech, I enjoy reading, running, and traveling. Exploring new cultures and perspectives is a passion of mine. I believe these interests make me a well-rounded individual, bringing a unique approach to my professional life.",
     },
   ],
+  // End About Me Section --------------------------
 
-  // End Services Section --------------------------
-
-  // About Secton --------------
+  // About Section --------------
   aboutpara:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  //   End About Section ---------------------
+    "When I'm not immersed in coding or exploring new tech, you can find me running long-distances, engrossed in a good book, or planning my next travel adventure. I'm passionate about continuous learning, not just in technology but also from different cultures and experiences. I believe in maintaining a balanced life as it enriches my perspective and indirectly contributes to my work. With every project I take on, I bring my whole self, aiming to make a meaningful impact while continuing to grow personally and professionally.",
+  // End About Section ---------------------
 };
