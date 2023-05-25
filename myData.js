@@ -1,7 +1,4 @@
 export default {
-  //(Please Do Not Remove The comma(,) after every variable)
-  //Change The Website Template
-
   //   Header Details ---------------------
   name: "Yusuf",
   headerTaglineOne: "Hello 👋",
@@ -74,16 +71,6 @@ export default {
       //Project URL - Add Your Project Url Here
       url: "http://chetanverma.com/",
     },
-
-    /*
-    If You Want To Add More Project just Copy and Paste This At The End
-    ,{
-        title: 'Project Five',
-        description: 'Something Amazing',
-        imageSrc: "",
-        url: ''
-    }
-    */
   ],
 
   // End Work Section -----------------------
@@ -120,5 +107,3 @@ export default {
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   //   End About Section ---------------------
 };
-
-// Thanks for using this template, I would love to hear from you contact me at hello@chetanverma.com

@@ -6,7 +6,7 @@ import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
 import client from "../client";
 // Local Data
-import data from "../yourData";
+import data from "../myData";
 
 // TODO: Add a loading screen
 // TODO: Add a 404 page
