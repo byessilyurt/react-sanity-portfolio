@@ -2,7 +2,7 @@ export async function getServerSideProps(context) {
   return {
     redirect: {
       permanent: false,
-      destination: "/cv.pdf",
+      destination: "/files/cv.pdf",
     },
   };
 }
